@@ -31,7 +31,9 @@ export default class MyApp extends React.Component {
     // Document on Paypal's currency code: https://developer.paypal.com/docs/classic/api/currency_codes/
 
     const client = {
-      sandbox: process.env.REACT_MOBILE_SHOP_APP_ID,
+      // sandbox: process.env.REACT_MOBILE_SHOP_APP_ID,
+      // production: "YOUR-PRODUCTION-APP-ID",
+      sandbox: 1,
       production: "YOUR-PRODUCTION-APP-ID",
     };
 
@@ -43,15 +45,15 @@ export default class MyApp extends React.Component {
 
     // NB. You can also have many Paypal express checkout buttons on page, just pass in the correct amount and they will work!
     return (
-      <PaypalExpressBtn
-        env={env}
-        client={client}
-        currency={currency}
-        total={this.props.totalAmount}
-        onError={onError}
-        onSuccess={onSuccess}
-        onCancel={onCancel}
-      />
+        <PaypalExpressBtn
+            env={env}
+            client={client}
+            currency={currency}
+            total={this.props.totalAmount}
+            onError={onError}
+            onSuccess={onSuccess}
+            onCancel={onCancel}
+        />
     );
   }
 }

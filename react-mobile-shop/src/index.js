@@ -10,15 +10,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App/App";
 
 // * import contextAPI
-import { ProductProvider } from "./ContextAPI/Context";
+import { ProductProvider } from "./ContextAPI/context.jsx";
 
 ReactDOM.render(
-  <ProductProvider>
-    <Router>
-      <App />
-    </Router>
-  </ProductProvider>,
-  document.getElementById("root")
+    <ProductProvider>
+        <Router>
+            <App />
+        </Router>
+    </ProductProvider>,
+    document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
